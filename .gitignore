@@ -1,2 +1,8 @@
+## OS
 **/.DS_store
+
+## JS
 node_modules
+
+## Rust
+target/

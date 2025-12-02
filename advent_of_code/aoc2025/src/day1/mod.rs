@@ -1,8 +1,11 @@
 mod util;
+use crate::util::{Part, logger};
 
 pub use util::parse_input;
 
-pub fn main_pt1() {
+fn main_pt1() {
+    let logger = logger();
+
     let mut hits_zero = 0;
     let mut position = 50;
     let input = parse_input();
@@ -10,16 +13,16 @@ pub fn main_pt1() {
     // println!("input: {input:?}");
 
     for rotation in input.iter() {
-        println!("position = {position}");
-        println!("rotation = {rotation}");
+        logger.log(&format!("position = {position}"));
+        logger.log(&format!("rotation = {rotation}"));
         position = (position + rotation).rem_euclid(100);
-        println!("new position = {position}");
+        logger.log(&format!("new position = {position}"));
         if position == 0 {
             hits_zero += 1;
         }
     }
 
-    println!("Hits zero: {}", hits_zero);
+    println!("Hits zero: {hits_zero}");
 }
 
 
@@ -38,16 +41,18 @@ fn stops_at_or_crosses_zero(position: i16, new_position: i16, rotation: i16) -> 
     }
 }
 
-pub fn main_pt2() {
+fn main_pt2() {
+    let logger = logger();
+
     let mut crosses_zero_total = 0;
     let mut position = 50;
     let input = parse_input();
 
     for rotation in input.iter() {
-        println!("===");
-        println!("crosses zero total = {crosses_zero_total}");
-        println!("position = {position}");
-        println!("rotation = {rotation}");
+        logger.log("===");
+        logger.log(&format!("crosses zero total = {crosses_zero_total}"));
+        logger.log(&format!("position = {position}"));
+        logger.log(&format!("rotation = {rotation}"));
         let destination = position + rotation;
         let new_position = destination.rem_euclid(100);
 
@@ -57,12 +62,19 @@ pub fn main_pt2() {
         crosses_zero += stops_at_or_crosses_zero(position, new_position, *rotation) as i16;
 
         position = new_position;
-        println!("=");
-        println!("new position = {destination} =eq= {position}");
+        logger.log("=");
+        logger.log(&format!("new position = {destination} =eq= {position}"));
         crosses_zero_total += crosses_zero;
-        println!("crosses zero = {crosses_zero}");
-        println!("crosses zero total = {crosses_zero_total}");
+        logger.log(&format!("crosses zero = {crosses_zero}"));
+        logger.log(&format!("crosses zero total = {crosses_zero_total}"));
     }
 
-    println!("Crosses zero: {}", crosses_zero_total);
+    println!("Crosses zero (total): {crosses_zero_total}");
+}
+
+pub fn main(part: &Part) {
+    match part {
+        Part::One => main_pt1(),
+        Part::Two => main_pt2(),
+    }
 }

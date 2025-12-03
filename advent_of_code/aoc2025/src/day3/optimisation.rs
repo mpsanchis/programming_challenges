@@ -35,3 +35,20 @@ pub fn max_joltage_2(bank: &[u8]) -> u16 {
     logger.log(&format!("Max joltage updated to {joltage}"));
     joltage
 }
+
+pub fn max_joltage_rec(bank: &[u8], digit_position: usize) -> u64 {
+    if digit_position == 0 {
+        return *bank.iter().max().unwrap() as u64;
+    }
+
+    let (pos_max_digit, max_digit) = bank.get(0..bank.len()-digit_position).unwrap().iter().enumerate().min_by(|x,y| {
+        // hack to get the FIRST max, otherwise 'max_by' returns the LAST max
+        let x_neg = -(*x.1 as i32);
+        let y_neg = -(*y.1 as i32);
+        x_neg.cmp(&y_neg)
+    }).unwrap();
+    let max_num: u64 = (*max_digit as u64) * 10u64.pow(digit_position as u32);
+    let bank_subset = bank.get(pos_max_digit+1..bank.len()).unwrap();
+
+    return max_num + max_joltage_rec(bank_subset, digit_position-1);
+}

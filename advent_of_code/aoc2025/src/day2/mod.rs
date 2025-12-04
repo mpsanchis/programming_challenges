@@ -14,13 +14,13 @@ pub fn main(part: &Part) {
 
     for range in input_ranges {
         let mut invalid_ids_local: Vec<u64> = Vec::new();
-        logger.log(&format!("Range: {}-{}", range.start, range.end));
+        logger.logn(&format!("Range: {}-{}", range.start, range.end));
         for number in range {
             if validation_fn(number) {
                 invalid_ids_local.push(number);
             }
         }
-        logger.log(&format!("Partial invalid IDs: {invalid_ids_local:?}"));
+        logger.logn(&format!("Partial invalid IDs: {invalid_ids_local:?}"));
         invalid_ids.extend(invalid_ids_local);
     }
     println!("Total invalid IDs: {invalid_ids:?}");

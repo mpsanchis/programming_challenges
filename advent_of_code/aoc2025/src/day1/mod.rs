@@ -13,10 +13,10 @@ fn main_pt1() {
     // println!("input: {input:?}");
 
     for rotation in input.iter() {
-        logger.log(&format!("position = {position}"));
-        logger.log(&format!("rotation = {rotation}"));
+        logger.logn(&format!("position = {position}"));
+        logger.logn(&format!("rotation = {rotation}"));
         position = (position + rotation).rem_euclid(100);
-        logger.log(&format!("new position = {position}"));
+        logger.logn(&format!("new position = {position}"));
         if position == 0 {
             hits_zero += 1;
         }
@@ -49,10 +49,10 @@ fn main_pt2() {
     let input = parse_input();
 
     for rotation in input.iter() {
-        logger.log("===");
-        logger.log(&format!("crosses zero total = {crosses_zero_total}"));
-        logger.log(&format!("position = {position}"));
-        logger.log(&format!("rotation = {rotation}"));
+        logger.logn("===");
+        logger.logn(&format!("crosses zero total = {crosses_zero_total}"));
+        logger.logn(&format!("position = {position}"));
+        logger.logn(&format!("rotation = {rotation}"));
         let destination = position + rotation;
         let new_position = destination.rem_euclid(100);
 
@@ -62,11 +62,11 @@ fn main_pt2() {
         crosses_zero += stops_at_or_crosses_zero(position, new_position, *rotation) as i16;
 
         position = new_position;
-        logger.log("=");
-        logger.log(&format!("new position = {destination} =eq= {position}"));
+        logger.logn("=");
+        logger.logn(&format!("new position = {destination} =eq= {position}"));
         crosses_zero_total += crosses_zero;
-        logger.log(&format!("crosses zero = {crosses_zero}"));
-        logger.log(&format!("crosses zero total = {crosses_zero_total}"));
+        logger.logn(&format!("crosses zero = {crosses_zero}"));
+        logger.logn(&format!("crosses zero total = {crosses_zero_total}"));
     }
 
     println!("Crosses zero (total): {crosses_zero_total}");

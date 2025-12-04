@@ -27,13 +27,13 @@ fn id_matches_pattern(id: &String, pattern_window_length: &usize) -> bool {
     let logger = logger();
 
     let pattern_window = id.get(0..*pattern_window_length).unwrap();
-    logger.log(&format!("Pattern window: {}", pattern_window));
+    logger.logn(&format!("Pattern window: {}", pattern_window));
 
     for step in 0..(id.len() / pattern_window_length) {
         let id_slice = id.get(step * pattern_window_length..(step + 1) * pattern_window_length).unwrap();
-        logger.log(&format!("ID slice: {}", id_slice));
+        logger.logn(&format!("ID slice: {}", id_slice));
         if id_slice != pattern_window {
-            logger.log(&format!("ID slice does not match pattern window"));
+            logger.logn(&format!("ID slice does not match pattern window"));
             return false;
         }
     }
@@ -44,10 +44,10 @@ pub fn is_invalid_id_2(id_: u64) -> bool {
     let logger = logger();
 
     let id = id_.to_string();
-    logger.log(&format!("---\nID: {}\n---", id));
+    logger.logn(&format!("---\nID: {}\n---", id));
 
     let pattern_window_lengths = pattern_window_lengths(id_);
-    logger.log(&format!("Pattern window lengths: {:?}", pattern_window_lengths));
+    logger.logn(&format!("Pattern window lengths: {:?}", pattern_window_lengths));
 
     for pattern_window_length in pattern_window_lengths.iter() {
         if id_matches_pattern(&id, pattern_window_length) {

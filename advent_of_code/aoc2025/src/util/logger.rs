@@ -19,9 +19,14 @@ impl Logger {
     pub fn new(log: bool) -> Self {
         Logger { log }
     }
-    pub fn log(&self, message: &str) {
+    pub fn logn(&self, message: &str) {
         if self.log {
             println!("{}", message);
+        }
+    }
+    pub fn log(&self, message: &str) {
+        if self.log {
+            print!("{}", message);
         }
     }
 }

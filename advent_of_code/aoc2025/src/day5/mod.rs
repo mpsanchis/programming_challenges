@@ -1,4 +1,4 @@
-use crate::util::Part;
+use crate::util::{logger, Part};
 
 mod input;
 mod validation;
@@ -19,7 +19,16 @@ fn main_1(ranges: Vec<Range>, ids: Vec<ID>) {
 }
 
 fn main_2(ranges: Vec<Range>) {
+    let mut total_fresh_ids = 0;
 
+    let reduced_ranges = validation::reduce_ranges(ranges);
+
+    for range in &reduced_ranges {
+        total_fresh_ids += range.size();
+    }
+
+    logger().logn(&format!("Reduced ranges: {:?}", &reduced_ranges));
+    println!("Total fresh IDs: {total_fresh_ids}");
 }
 
 pub fn main(part: &Part) {

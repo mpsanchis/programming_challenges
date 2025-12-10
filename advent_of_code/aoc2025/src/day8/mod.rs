@@ -13,7 +13,7 @@ fn merge_clusters(
     box2_idx: usize,
     boxes: &mut Vec<Box>,
     boxes_per_cluster: &mut HashMap<ClusterID, HashSet<usize>>,
-) {
+) -> ClusterID {
     logger().logn("=====");
     logger().logn(&format!("Merging boxes [{box1_idx}] {:?} and [{box2_idx}] {:?}", &boxes[box1_idx], &boxes[box2_idx]));
     let (from_box_idx, to_cluster_id) = match boxes[box1_idx].cluster_id {
@@ -46,7 +46,7 @@ fn merge_clusters(
         logger().logn("Boxes already in same cluster. Nothing to do.");
         logger().logn("=====");
         // Handle the case where the boxes are already connected: nothing to do
-        return;
+        return from_cluster_id;
     }
     
     let from_cluster = boxes_per_cluster.remove(&from_cluster_id).unwrap_or_else(|| {
@@ -63,6 +63,7 @@ fn merge_clusters(
     }
     logger().logn(&format!("Boxes merged into cluster [{to_cluster_id}] {:?}", boxes_per_cluster.get(&to_cluster_id).unwrap()));
     logger().logn("=====");
+    to_cluster_id
 }
 
 fn main_1(mut boxes: Vec<Box>) {
@@ -92,8 +93,30 @@ fn main_1(mut boxes: Vec<Box>) {
     println!("Result: {}", three_biggest_clusters[0] * three_biggest_clusters[1] * three_biggest_clusters[2]);
 }
 
-fn main_2(box_positions: Vec<Box>) {
+fn main_2(mut boxes: Vec<Box>) {
     // Implementation for part 2
+    let distances = calculation::calculate_distances(&boxes);
+    
+    let mut boxes_per_cluster: HashMap<ClusterID, HashSet<usize>> = HashMap::new();
+    
+    for dist in distances {
+        let cluster_id = merge_clusters(
+            dist.box1_idx, 
+            dist.box2_idx, 
+            &mut boxes, 
+            &mut boxes_per_cluster
+        );
+        let cluster_size = boxes_per_cluster.get(&cluster_id).unwrap().len();
+        if cluster_size == boxes.len() {
+            // Cluster contains all the boxes: we're done
+            let box1_x = boxes[dist.box1_idx].position.0;
+            let box2_x = boxes[dist.box2_idx].position.0;
+            println!("Just created a cluster containing {cluster_size} elements");
+            println!("Box 1 x: {}, Box 2 x: {}", box1_x, box2_x);
+            println!("Solution: {}", box1_x * box2_x);
+            break;
+        }
+    }
 }
 
 pub fn main(part: &Part) {

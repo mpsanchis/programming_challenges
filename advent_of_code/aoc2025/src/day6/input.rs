@@ -104,7 +104,7 @@ fn get_empty_problems(input: &str) -> Vec<Problem> {
     }
     // Generate 'numbers_per_current_problem' numbers in the last problem
     let last_problem = problems.len()-1;
-    logger().logn(&format!("Last problem has {} numbers", opt_numbers_per_current_problem.unwrap()));
+    // logger().logn(&format!("Last problem has {} numbers", opt_numbers_per_current_problem.unwrap()));
     for _ in 0..opt_numbers_per_current_problem.unwrap() {
         problems[last_problem].numbers.push(Vec::new());
     }

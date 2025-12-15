@@ -1,10 +1,11 @@
-use std::usize;
+use std::vec;
+use std::{collections::HashMap, usize};
 use std::collections::VecDeque;
 
 use crate::day10::types::SwitchesPressed;
 use crate::util::logger;
 
-use super::types::{Machine, State, Switch};
+use super::types::{Machine, State, Joltage, Switch};
 
 pub struct MachineCalculator {
     machine: Machine,
@@ -111,5 +112,134 @@ impl MachineCalculatorResult {
     
     pub fn len(&self) -> usize {
         self.result.len()
+    }
+}
+
+pub struct MachineCalculator2 {
+    machine: Machine,
+    result: Option<State2>,
+}
+
+impl MachineCalculator2 {
+    pub fn new(machine: Machine) -> Self {
+        MachineCalculator2 { machine, result: None }
+    }
+    
+    fn new_state(&self, state: &State2, switch_id_to_try: usize) -> State2 {
+        let mut new_state = state.clone();
+        let current_attempts_switch = state.get(&switch_id_to_try).unwrap_or(&0);
+        new_state.insert(switch_id_to_try, *current_attempts_switch + 1);
+        new_state
+    }
+    
+    fn calculate_joltages(&self, state: &State2) -> Vec<Joltage> {
+        logger().logn(&format!("[calculate_joltages] Current state: {:?}", state));
+        let mut joltages: Vec<Joltage> = vec![0; self.machine.get_joltages().len()];
+        for (switch_id, num_presses) in state.iter() {
+            logger().logn(&format!("[calculate_joltages] Adding joltages for switch #{switch_id}: {}", self.machine.get_switches().get(*switch_id).unwrap() ));
+            let switch = &self.machine.get_switches()[*switch_id];
+            for joltage_id in switch.iter() {
+                joltages[*joltage_id] += *num_presses as u32;
+            }
+        }
+        logger().logn(&format!("[calculate_joltages] Joltages: {:?}", joltages));
+        joltages
+    }
+    
+    fn are_joltages_equal(&self, j1: &Vec<Joltage>, j2: &Vec<Joltage>) -> bool {
+        for i in 0..j1.len() {
+            if j1[i] != j2[i] {
+                return false;
+            }
+        }
+        true
+    }
+    
+    fn are_joltages_too_high(&self, desired_joltages: &Vec<Joltage>, current_joltages: &Vec<Joltage>) -> bool {
+        for i in 0..desired_joltages.len() {
+            if current_joltages[i] > desired_joltages[i] {
+                return true;
+            }
+        }
+        false
+    }
+    
+    fn calculate_result_recursively(&mut self, state: State2) -> bool {
+        logger().logn(&format!("Current state: {:?}", state));
+        let desired_joltages = self.machine.get_joltages();
+        let current_joltages = self.calculate_joltages(&state);
+        logger().logn(&format!("Current joltages: {:?}", current_joltages));
+        
+        if self.are_joltages_equal(desired_joltages, &current_joltages) {
+            // reached the result we wanted
+            self.result = Some(state.clone());
+            return true;
+        }
+        if self.are_joltages_too_high(desired_joltages, &current_joltages) {
+            // Stop searching if pressing buttons doesn't make sense anymore
+            return false;
+        }
+        // Explore pressing all the buttons
+        for switch_id in 0..self.machine.get_switches().len() {
+            let new_state = self.new_state(&state, switch_id);
+            logger().logn(&format!("Trying to press switch: {switch_id} = {}", self.machine.get_switches().get(switch_id).unwrap()));
+            let result_found = self.calculate_result_recursively(new_state);
+            if result_found {
+                // No need to keep looping
+                return true;
+            }
+        }
+        
+        false
+    }
+    
+    pub fn calculate_result(&mut self) -> MachineCalculatorResult2 {
+        let initial_state = HashMap::new();
+        let result_found = self.calculate_result_recursively(initial_state);
+        
+        if !result_found {
+            panic!("Could not find a result for part 2");
+        }
+        
+        let result = self.result.as_ref().unwrap();
+        
+        MachineCalculatorResult2 { 
+            desired_joltages: self.machine.get_joltages().clone(), 
+            result: result.clone(),
+            switches: self.machine.get_switches().clone(),
+        }
+    }
+}
+
+pub type State2 = HashMap<
+    usize, // id of the Switch being pressed
+    usize // number of times the Switch has been pressed 
+>;
+
+pub struct MachineCalculatorResult2 {
+    desired_joltages: Vec<Joltage>,
+    result: State2,
+    switches: Vec<Switch>,
+}
+
+impl MachineCalculatorResult2 {
+    pub fn print(&self) {
+        println!("Desired Joltages: {:?}", self.desired_joltages);
+        println!("Obtained with:");
+        let mut total_presses = 0;
+        for (switch_id, num_presses) in self.result.iter() {
+            let switch = self.switches.get(*switch_id).unwrap();
+            println!("\tswitch: {}", switch);
+            println!("\tpressed times: {}", num_presses);
+            total_presses += *num_presses;
+        }
+        println!("\ttotal pressed times: {}", total_presses);
+        println!("+++++");
+    }
+    
+    pub fn num_presses(&self) -> usize {
+        self.result.iter()
+            .map(|(_,num_presses)| num_presses)
+            .sum()
     }
 }

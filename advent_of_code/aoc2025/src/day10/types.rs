@@ -129,6 +129,10 @@ impl Machine {
         &self.switches
     }
     
+    pub fn get_joltages(&self) -> &Vec<Joltage> {
+        &self.joltages
+    }
+    
 }
 
 #[cfg(test)]

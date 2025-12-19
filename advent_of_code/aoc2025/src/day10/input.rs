@@ -27,10 +27,10 @@ fn parse_switch(section: &str) -> Switch {
 }
 fn parse_joltages(section: &str) -> Vec<Joltage> {
     let mut joltages = Vec::new();
-    for num in section.chars()
-        .filter_map(|c| c.to_digit(10))
-    {
-        joltages.push(num as Joltage);
+    let section_nums = section[1..section.len()-1].split(',');
+    for num_str in section_nums {
+        let num = num_str.parse().expect("Could not parse number {num_str}");
+        joltages.push(num);
     }
     joltages
 }

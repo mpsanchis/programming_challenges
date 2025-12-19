@@ -2,7 +2,7 @@ use std::fmt::Display;
 
 pub type Joltage = u32;
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Switch(Vec<usize>);
 
 impl Switch {
@@ -20,6 +20,9 @@ impl Switch {
     }
     pub fn iter(&self) -> impl Iterator<Item = &usize> {
         self.0.iter()
+    }
+    pub fn contains(&self, elem: usize) -> bool {
+        self.0.contains(&elem)
     }
 }
 

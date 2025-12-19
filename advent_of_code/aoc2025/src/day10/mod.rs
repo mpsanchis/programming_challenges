@@ -3,6 +3,7 @@ use crate::util::{Part, logger};
 mod types;
 mod input;
 mod calculator;
+mod combinatorics;
 
 use input::parse_input;
 use types::{Machine};
@@ -40,7 +41,7 @@ fn main_2(mut machines: Vec<Machine>) {
     for result in &results {
         result.print();
     }
-    println!("Final result: {}", results.iter().map(|r| r.num_presses()).sum::<usize>());
+    println!("Final result: {}", results.iter().map(|r| r.num_presses()).sum::<u32>());
 }
 
 pub fn main(part: &Part) {

@@ -1,0 +1,1755 @@
+Args: Args { verbosity: true, day: 10, part: Two }
+Starting iteration 0
+Visited states: 1
+Current local minimum: None
+Current state: 0, 0, 0, 0, 0, 0
+Current joltages: [0, 0, 0, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [3, 5, 4, 7]
+	Next position, to press 3 times, is 0
+	Will attempt to press 3 times using the 2 switches: [Switch([0, 2]), Switch([0, 1])]
+	Combinations possible: 4
+	From state 0, 0, 0, 0, 0, 0, trying combination: [(4, 0), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 0, 3
+Visited states: 2
+Current local minimum: None
+Current state: 0, 0, 0, 0, 0, 3
+Current joltages: [3, 3, 0, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 2, 4, 7]
+	Next position, to press 2 times, is 1
+	Will attempt to press 2 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 3
+	From state 0, 0, 0, 0, 0, 3, trying combination: [(1, 0), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 0, 5
+Visited states: 3
+Current local minimum: None
+Current state: 0, 0, 0, 0, 0, 5
+Current joltages: [5, 5, 0, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 0, 3, trying combination: [(1, 1), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 0, 0, 0, 4
+Visited states: 4
+Current local minimum: None
+Current state: 0, 1, 0, 0, 0, 4
+Current joltages: [4, 5, 0, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 0, 3, trying combination: [(1, 2), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 0, 0, 3
+Visited states: 5
+Current local minimum: None
+Current state: 0, 2, 0, 0, 0, 3
+Current joltages: [3, 5, 0, 2]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 4, 5]
+	Next position, to press 4 times, is 2
+	Will attempt to press 4 times using the 3 switches: [Switch([2]), Switch([2, 3]), Switch([0, 2])]
+	Combinations possible: 15
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 0), (3, 0), (4, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 0, 4, 3
+Visited states: 6
+Current local minimum: None
+Current state: 0, 2, 0, 0, 4, 3
+Current joltages: [7, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 0), (3, 1), (4, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 1, 3, 3
+Visited states: 7
+Current local minimum: None
+Current state: 0, 2, 0, 1, 3, 3
+Current joltages: [6, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 0), (3, 2), (4, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 2, 2, 3
+Visited states: 8
+Current local minimum: None
+Current state: 0, 2, 0, 2, 2, 3
+Current joltages: [5, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 0), (3, 3), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 3, 1, 3
+Visited states: 9
+Current local minimum: None
+Current state: 0, 2, 0, 3, 1, 3
+Current joltages: [4, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 0), (3, 4), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 4, 0, 3
+Visited states: 10
+Current local minimum: None
+Current state: 0, 2, 0, 4, 0, 3
+Current joltages: [3, 5, 4, 6]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 1]
+	Next position, to press 1 times, is 3
+	Will attempt to press 1 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 3
+	From state 0, 2, 0, 4, 0, 3, trying combination: [(0, 0), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 4, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 5, 0, 3
+Visited states: 11
+Current local minimum: None
+Current state: 0, 2, 0, 5, 0, 3
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 4, 0, 3, trying combination: [(0, 0), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 4, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 4, 0, 3
+Visited states: 12
+Current local minimum: None
+Current state: 0, 3, 0, 4, 0, 3
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 4, 0, 3, trying combination: [(0, 1), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 4, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 2, 0, 4, 0, 3
+Visited states: 13
+Current local minimum: None
+Current state: 1, 2, 0, 4, 0, 3
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Reached desired state
+********* Updating result to buttons pressed: 10
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 1), (3, 0), (4, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 0, 3, 3
+Visited states: 14
+Current local minimum: 10
+Current state: 0, 2, 1, 0, 3, 3
+Current joltages: [6, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 1), (3, 1), (4, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 1, 2, 3
+Visited states: 15
+Current local minimum: 10
+Current state: 0, 2, 1, 1, 2, 3
+Current joltages: [5, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 1), (3, 2), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 2, 1, 3
+Visited states: 16
+Current local minimum: 10
+Current state: 0, 2, 1, 2, 1, 3
+Current joltages: [4, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 1), (3, 3), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 3, 0, 3
+Visited states: 17
+Current local minimum: 10
+Current state: 0, 2, 1, 3, 0, 3
+Current joltages: [3, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 2]
+	Next position, to press 2 times, is 3
+	Will attempt to press 2 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 6
+	From state 0, 2, 1, 3, 0, 3, trying combination: [(0, 0), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 1, 3, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 5, 0, 3
+Visited states: 18
+Current local minimum: 10
+Current state: 0, 2, 1, 5, 0, 3
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 1, 3, 0, 3, trying combination: [(0, 0), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 1, 3, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 4, 0, 3
+Visited states: 19
+Current local minimum: 10
+Current state: 0, 3, 1, 4, 0, 3
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 1, 3, 0, 3, trying combination: [(0, 0), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 1, 3, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 1, 3, 0, 3
+Visited states: 20
+Current local minimum: 10
+Current state: 0, 4, 1, 3, 0, 3
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 1, 3, 0, 3, trying combination: [(0, 1), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 1, 3, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 2, 1, 4, 0, 3
+Visited states: 21
+Current local minimum: 10
+Current state: 1, 2, 1, 4, 0, 3
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 1, 3, 0, 3, trying combination: [(0, 1), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 1, 3, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 1, 3, 0, 3
+Visited states: 22
+Current local minimum: 10
+Current state: 1, 3, 1, 3, 0, 3
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 1, 3, 0, 3, trying combination: [(0, 2), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 1, 3, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 2, 1, 3, 0, 3
+Visited states: 23
+Current local minimum: 10
+Current state: 2, 2, 1, 3, 0, 3
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 2), (3, 0), (4, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 2, 0, 2, 3
+Visited states: 24
+Current local minimum: 10
+Current state: 0, 2, 2, 0, 2, 3
+Current joltages: [5, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 2), (3, 1), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 2, 1, 1, 3
+Visited states: 25
+Current local minimum: 10
+Current state: 0, 2, 2, 1, 1, 3
+Current joltages: [4, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 2), (3, 2), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 2, 2, 0, 3
+Visited states: 26
+Current local minimum: 10
+Current state: 0, 2, 2, 2, 0, 3
+Current joltages: [3, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 3]
+	Next position, to press 3 times, is 3
+	Will attempt to press 3 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 10
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 0), (1, 0), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 2, 5, 0, 3
+Visited states: 27
+Current local minimum: 10
+Current state: 0, 2, 2, 5, 0, 3
+Current joltages: [3, 5, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 0), (1, 1), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 2, 4, 0, 3
+Visited states: 28
+Current local minimum: 10
+Current state: 0, 3, 2, 4, 0, 3
+Current joltages: [3, 6, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 0), (1, 2), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 2, 3, 0, 3
+Visited states: 29
+Current local minimum: 10
+Current state: 0, 4, 2, 3, 0, 3
+Current joltages: [3, 7, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 0), (1, 3), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 2, 2, 0, 3
+Visited states: 30
+Current local minimum: 10
+Current state: 0, 5, 2, 2, 0, 3
+Current joltages: [3, 8, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 1), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 2, 2, 4, 0, 3
+Visited states: 31
+Current local minimum: 10
+Current state: 1, 2, 2, 4, 0, 3
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 1), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 2, 3, 0, 3
+Visited states: 32
+Current local minimum: 10
+Current state: 1, 3, 2, 3, 0, 3
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 1), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 2, 2, 0, 3
+Visited states: 33
+Current local minimum: 10
+Current state: 1, 4, 2, 2, 0, 3
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 2), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 2, 2, 3, 0, 3
+Visited states: 34
+Current local minimum: 10
+Current state: 2, 2, 2, 3, 0, 3
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 2), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 3, 2, 2, 0, 3
+Visited states: 35
+Current local minimum: 10
+Current state: 2, 3, 2, 2, 0, 3
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 2, 2, 0, 3, trying combination: [(0, 3), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 2, 2, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 3, 2, 2, 2, 0, 3
+Visited states: 36
+Current local minimum: 10
+Current state: 3, 2, 2, 2, 0, 3
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 3), (3, 0), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 3, 0, 1, 3
+Visited states: 37
+Current local minimum: 10
+Current state: 0, 2, 3, 0, 1, 3
+Current joltages: [4, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 3), (3, 1), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 3, 1, 0, 3
+Visited states: 38
+Current local minimum: 10
+Current state: 0, 2, 3, 1, 0, 3
+Current joltages: [3, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 4]
+	Next position, to press 4 times, is 3
+	Will attempt to press 4 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 15
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 0), (1, 0), (3, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 3, 5, 0, 3
+Visited states: 39
+Current local minimum: 10
+Current state: 0, 2, 3, 5, 0, 3
+Current joltages: [3, 5, 8, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 0), (1, 1), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 3, 4, 0, 3
+Visited states: 40
+Current local minimum: 10
+Current state: 0, 3, 3, 4, 0, 3
+Current joltages: [3, 6, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 0), (1, 2), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 3, 3, 0, 3
+Visited states: 41
+Current local minimum: 10
+Current state: 0, 4, 3, 3, 0, 3
+Current joltages: [3, 7, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 0), (1, 3), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 3, 2, 0, 3
+Visited states: 42
+Current local minimum: 10
+Current state: 0, 5, 3, 2, 0, 3
+Current joltages: [3, 8, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 0), (1, 4), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 3, 1, 0, 3
+Visited states: 43
+Current local minimum: 10
+Current state: 0, 6, 3, 1, 0, 3
+Current joltages: [3, 9, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 1), (1, 0), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 2, 3, 4, 0, 3
+Visited states: 44
+Current local minimum: 10
+Current state: 1, 2, 3, 4, 0, 3
+Current joltages: [3, 5, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 1), (1, 1), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 3, 3, 0, 3
+Visited states: 45
+Current local minimum: 10
+Current state: 1, 3, 3, 3, 0, 3
+Current joltages: [3, 6, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 1), (1, 2), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 3, 2, 0, 3
+Visited states: 46
+Current local minimum: 10
+Current state: 1, 4, 3, 2, 0, 3
+Current joltages: [3, 7, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 1), (1, 3), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 3, 1, 0, 3
+Visited states: 47
+Current local minimum: 10
+Current state: 1, 5, 3, 1, 0, 3
+Current joltages: [3, 8, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 2), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 2, 3, 3, 0, 3
+Visited states: 48
+Current local minimum: 10
+Current state: 2, 2, 3, 3, 0, 3
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 2), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 3, 3, 2, 0, 3
+Visited states: 49
+Current local minimum: 10
+Current state: 2, 3, 3, 2, 0, 3
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 2), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 4, 3, 1, 0, 3
+Visited states: 50
+Current local minimum: 10
+Current state: 2, 4, 3, 1, 0, 3
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 3), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 3, 2, 3, 2, 0, 3
+Visited states: 51
+Current local minimum: 10
+Current state: 3, 2, 3, 2, 0, 3
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 3), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 3, 3, 3, 1, 0, 3
+Visited states: 52
+Current local minimum: 10
+Current state: 3, 3, 3, 1, 0, 3
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 3, 1, 0, 3, trying combination: [(0, 4), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 3, 1, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 4, 2, 3, 1, 0, 3
+Visited states: 53
+Current local minimum: 10
+Current state: 4, 2, 3, 1, 0, 3
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 0, 0, 0, 3, trying combination: [(2, 4), (3, 0), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 0, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 4, 0, 0, 3
+Visited states: 54
+Current local minimum: 10
+Current state: 0, 2, 4, 0, 0, 3
+Current joltages: [3, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 5]
+	Next position, to press 5 times, is 3
+	Will attempt to press 5 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 21
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 0), (1, 0), (3, 5)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 4, 5, 0, 3
+Visited states: 55
+Current local minimum: 10
+Current state: 0, 2, 4, 5, 0, 3
+Current joltages: [3, 5, 9, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 0), (1, 1), (3, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 4, 4, 0, 3
+Visited states: 56
+Current local minimum: 10
+Current state: 0, 3, 4, 4, 0, 3
+Current joltages: [3, 6, 8, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 0), (1, 2), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 4, 3, 0, 3
+Visited states: 57
+Current local minimum: 10
+Current state: 0, 4, 4, 3, 0, 3
+Current joltages: [3, 7, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 0), (1, 3), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 4, 2, 0, 3
+Visited states: 58
+Current local minimum: 10
+Current state: 0, 5, 4, 2, 0, 3
+Current joltages: [3, 8, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 0), (1, 4), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 4, 1, 0, 3
+Visited states: 59
+Current local minimum: 10
+Current state: 0, 6, 4, 1, 0, 3
+Current joltages: [3, 9, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 0), (1, 5), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 0, 7, 4, 0, 0, 3
+Visited states: 60
+Current local minimum: 10
+Current state: 0, 7, 4, 0, 0, 3
+Current joltages: [3, 10, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 1), (1, 0), (3, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 2, 4, 4, 0, 3
+Visited states: 61
+Current local minimum: 10
+Current state: 1, 2, 4, 4, 0, 3
+Current joltages: [3, 5, 8, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 1), (1, 1), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 4, 3, 0, 3
+Visited states: 62
+Current local minimum: 10
+Current state: 1, 3, 4, 3, 0, 3
+Current joltages: [3, 6, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 1), (1, 2), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 4, 2, 0, 3
+Visited states: 63
+Current local minimum: 10
+Current state: 1, 4, 4, 2, 0, 3
+Current joltages: [3, 7, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 1), (1, 3), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 4, 1, 0, 3
+Visited states: 64
+Current local minimum: 10
+Current state: 1, 5, 4, 1, 0, 3
+Current joltages: [3, 8, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 1), (1, 4), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 1, 6, 4, 0, 0, 3
+Visited states: 65
+Current local minimum: 10
+Current state: 1, 6, 4, 0, 0, 3
+Current joltages: [3, 9, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 2), (1, 0), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 2, 4, 3, 0, 3
+Visited states: 66
+Current local minimum: 10
+Current state: 2, 2, 4, 3, 0, 3
+Current joltages: [3, 5, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 2), (1, 1), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 3, 4, 2, 0, 3
+Visited states: 67
+Current local minimum: 10
+Current state: 2, 3, 4, 2, 0, 3
+Current joltages: [3, 6, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 2), (1, 2), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 4, 4, 1, 0, 3
+Visited states: 68
+Current local minimum: 10
+Current state: 2, 4, 4, 1, 0, 3
+Current joltages: [3, 7, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 2), (1, 3), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 2, 5, 4, 0, 0, 3
+Visited states: 69
+Current local minimum: 10
+Current state: 2, 5, 4, 0, 0, 3
+Current joltages: [3, 8, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 3), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 3, 2, 4, 2, 0, 3
+Visited states: 70
+Current local minimum: 10
+Current state: 3, 2, 4, 2, 0, 3
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 3), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 3, 3, 4, 1, 0, 3
+Visited states: 71
+Current local minimum: 10
+Current state: 3, 3, 4, 1, 0, 3
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 3), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 3, 4, 4, 0, 0, 3
+Visited states: 72
+Current local minimum: 10
+Current state: 3, 4, 4, 0, 0, 3
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 4), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 4, 2, 4, 1, 0, 3
+Visited states: 73
+Current local minimum: 10
+Current state: 4, 2, 4, 1, 0, 3
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 4), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 4, 3, 4, 0, 0, 3
+Visited states: 74
+Current local minimum: 10
+Current state: 4, 3, 4, 0, 0, 3
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 2, 4, 0, 0, 3, trying combination: [(0, 5), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 2, 4, 0, 0, 3
+		[new_state_by_pressing_many_buttons] new state: 5, 2, 4, 0, 0, 3
+Visited states: 75
+Current local minimum: 10
+Current state: 5, 2, 4, 0, 0, 3
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 0, 0, 0, 0, 0, trying combination: [(4, 1), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 1, 2
+Visited states: 76
+Current local minimum: 10
+Current state: 0, 0, 0, 0, 1, 2
+Current joltages: [3, 2, 1, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 3, 3, 7]
+	Next position, to press 3 times, is 1
+	Will attempt to press 3 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 4
+	From state 0, 0, 0, 0, 1, 2, trying combination: [(1, 0), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 1, 5
+Visited states: 77
+Current local minimum: 10
+Current state: 0, 0, 0, 0, 1, 5
+Current joltages: [6, 5, 1, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 1, 2, trying combination: [(1, 1), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 0, 0, 1, 4
+Visited states: 78
+Current local minimum: 10
+Current state: 0, 1, 0, 0, 1, 4
+Current joltages: [5, 5, 1, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 1, 2, trying combination: [(1, 2), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 0, 1, 3
+Visited states: 79
+Current local minimum: 10
+Current state: 0, 2, 0, 0, 1, 3
+Current joltages: [4, 5, 1, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 1, 2, trying combination: [(1, 3), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 0, 1, 2
+Visited states: 80
+Current local minimum: 10
+Current state: 0, 3, 0, 0, 1, 2
+Current joltages: [3, 5, 1, 3]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 3, 4]
+	Next position, to press 3 times, is 2
+	Will attempt to press 3 times using the 3 switches: [Switch([2]), Switch([2, 3]), Switch([0, 2])]
+	Combinations possible: 10
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 0), (3, 0), (4, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 0, 4, 2
+Visited states: 81
+Current local minimum: 10
+Current state: 0, 3, 0, 0, 4, 2
+Current joltages: [6, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 0), (3, 1), (4, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 1, 3, 2
+Visited states: 82
+Current local minimum: 10
+Current state: 0, 3, 0, 1, 3, 2
+Current joltages: [5, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 0), (3, 2), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 2, 2, 2
+Visited states: 83
+Current local minimum: 10
+Current state: 0, 3, 0, 2, 2, 2
+Current joltages: [4, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 0), (3, 3), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 3, 1, 2
+Visited states: 84
+Current local minimum: 10
+Current state: 0, 3, 0, 3, 1, 2
+Current joltages: [3, 5, 4, 6]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 1]
+	Next position, to press 1 times, is 3
+	Will attempt to press 1 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 3
+	From state 0, 3, 0, 3, 1, 2, trying combination: [(0, 0), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 3, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 4, 1, 2
+Visited states: 85
+Current local minimum: 10
+Current state: 0, 3, 0, 4, 1, 2
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 3, 1, 2, trying combination: [(0, 0), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 3, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 0, 3, 1, 2
+Visited states: 86
+Current local minimum: 10
+Current state: 0, 4, 0, 3, 1, 2
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 3, 1, 2, trying combination: [(0, 1), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 3, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 0, 3, 1, 2
+Visited states: 87
+Current local minimum: 10
+Current state: 1, 3, 0, 3, 1, 2
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Reached desired state
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 1), (3, 0), (4, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 0, 3, 2
+Visited states: 88
+Current local minimum: 10
+Current state: 0, 3, 1, 0, 3, 2
+Current joltages: [5, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 1), (3, 1), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 1, 2, 2
+Visited states: 89
+Current local minimum: 10
+Current state: 0, 3, 1, 1, 2, 2
+Current joltages: [4, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 1), (3, 2), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 2, 1, 2
+Visited states: 90
+Current local minimum: 10
+Current state: 0, 3, 1, 2, 1, 2
+Current joltages: [3, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 2]
+	Next position, to press 2 times, is 3
+	Will attempt to press 2 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 6
+	From state 0, 3, 1, 2, 1, 2, trying combination: [(0, 0), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 1, 2, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 4, 1, 2
+Visited states: 91
+Current local minimum: 10
+Current state: 0, 3, 1, 4, 1, 2
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 1, 2, 1, 2, trying combination: [(0, 0), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 1, 2, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 1, 3, 1, 2
+Visited states: 92
+Current local minimum: 10
+Current state: 0, 4, 1, 3, 1, 2
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 1, 2, 1, 2, trying combination: [(0, 0), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 1, 2, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 1, 2, 1, 2
+Visited states: 93
+Current local minimum: 10
+Current state: 0, 5, 1, 2, 1, 2
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 1, 2, 1, 2, trying combination: [(0, 1), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 1, 2, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 1, 3, 1, 2
+Visited states: 94
+Current local minimum: 10
+Current state: 1, 3, 1, 3, 1, 2
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 1, 2, 1, 2, trying combination: [(0, 1), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 1, 2, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 1, 2, 1, 2
+Visited states: 95
+Current local minimum: 10
+Current state: 1, 4, 1, 2, 1, 2
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 1, 2, 1, 2, trying combination: [(0, 2), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 1, 2, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 2, 3, 1, 2, 1, 2
+Visited states: 96
+Current local minimum: 10
+Current state: 2, 3, 1, 2, 1, 2
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 2), (3, 0), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 2, 0, 2, 2
+Visited states: 97
+Current local minimum: 10
+Current state: 0, 3, 2, 0, 2, 2
+Current joltages: [4, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 2), (3, 1), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 2, 1, 1, 2
+Visited states: 98
+Current local minimum: 10
+Current state: 0, 3, 2, 1, 1, 2
+Current joltages: [3, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 3]
+	Next position, to press 3 times, is 3
+	Will attempt to press 3 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 10
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 0), (1, 0), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 2, 4, 1, 2
+Visited states: 99
+Current local minimum: 10
+Current state: 0, 3, 2, 4, 1, 2
+Current joltages: [3, 5, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 0), (1, 1), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 2, 3, 1, 2
+Visited states: 100
+Current local minimum: 10
+Current state: 0, 4, 2, 3, 1, 2
+Current joltages: [3, 6, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 0), (1, 2), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 2, 2, 1, 2
+Visited states: 101
+Current local minimum: 10
+Current state: 0, 5, 2, 2, 1, 2
+Current joltages: [3, 7, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 0), (1, 3), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 2, 1, 1, 2
+Visited states: 102
+Current local minimum: 10
+Current state: 0, 6, 2, 1, 1, 2
+Current joltages: [3, 8, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 1), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 2, 3, 1, 2
+Visited states: 103
+Current local minimum: 10
+Current state: 1, 3, 2, 3, 1, 2
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 1), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 2, 2, 1, 2
+Visited states: 104
+Current local minimum: 10
+Current state: 1, 4, 2, 2, 1, 2
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 1), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 2, 1, 1, 2
+Visited states: 105
+Current local minimum: 10
+Current state: 1, 5, 2, 1, 1, 2
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 2), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 2, 3, 2, 2, 1, 2
+Visited states: 106
+Current local minimum: 10
+Current state: 2, 3, 2, 2, 1, 2
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 2), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 2, 4, 2, 1, 1, 2
+Visited states: 107
+Current local minimum: 10
+Current state: 2, 4, 2, 1, 1, 2
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 2, 1, 1, 2, trying combination: [(0, 3), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 2, 1, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 3, 3, 2, 1, 1, 2
+Visited states: 108
+Current local minimum: 10
+Current state: 3, 3, 2, 1, 1, 2
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 0, 0, 1, 2, trying combination: [(2, 3), (3, 0), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 0, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 3, 0, 1, 2
+Visited states: 109
+Current local minimum: 10
+Current state: 0, 3, 3, 0, 1, 2
+Current joltages: [3, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 4]
+	Next position, to press 4 times, is 3
+	Will attempt to press 4 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 15
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 0), (1, 0), (3, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 3, 4, 1, 2
+Visited states: 110
+Current local minimum: 10
+Current state: 0, 3, 3, 4, 1, 2
+Current joltages: [3, 5, 8, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 0), (1, 1), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 3, 3, 1, 2
+Visited states: 111
+Current local minimum: 10
+Current state: 0, 4, 3, 3, 1, 2
+Current joltages: [3, 6, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 0), (1, 2), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 3, 2, 1, 2
+Visited states: 112
+Current local minimum: 10
+Current state: 0, 5, 3, 2, 1, 2
+Current joltages: [3, 7, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 0), (1, 3), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 3, 1, 1, 2
+Visited states: 113
+Current local minimum: 10
+Current state: 0, 6, 3, 1, 1, 2
+Current joltages: [3, 8, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 0), (1, 4), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 0, 7, 3, 0, 1, 2
+Visited states: 114
+Current local minimum: 10
+Current state: 0, 7, 3, 0, 1, 2
+Current joltages: [3, 9, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 1), (1, 0), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 3, 3, 3, 1, 2
+Visited states: 115
+Current local minimum: 10
+Current state: 1, 3, 3, 3, 1, 2
+Current joltages: [3, 5, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 1), (1, 1), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 3, 2, 1, 2
+Visited states: 116
+Current local minimum: 10
+Current state: 1, 4, 3, 2, 1, 2
+Current joltages: [3, 6, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 1), (1, 2), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 3, 1, 1, 2
+Visited states: 117
+Current local minimum: 10
+Current state: 1, 5, 3, 1, 1, 2
+Current joltages: [3, 7, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 1), (1, 3), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 1, 6, 3, 0, 1, 2
+Visited states: 118
+Current local minimum: 10
+Current state: 1, 6, 3, 0, 1, 2
+Current joltages: [3, 8, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 2), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 2, 3, 3, 2, 1, 2
+Visited states: 119
+Current local minimum: 10
+Current state: 2, 3, 3, 2, 1, 2
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 2), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 2, 4, 3, 1, 1, 2
+Visited states: 120
+Current local minimum: 10
+Current state: 2, 4, 3, 1, 1, 2
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 2), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 2, 5, 3, 0, 1, 2
+Visited states: 121
+Current local minimum: 10
+Current state: 2, 5, 3, 0, 1, 2
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 3), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 3, 3, 3, 1, 1, 2
+Visited states: 122
+Current local minimum: 10
+Current state: 3, 3, 3, 1, 1, 2
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 3), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 3, 4, 3, 0, 1, 2
+Visited states: 123
+Current local minimum: 10
+Current state: 3, 4, 3, 0, 1, 2
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 3, 3, 0, 1, 2, trying combination: [(0, 4), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 3, 3, 0, 1, 2
+		[new_state_by_pressing_many_buttons] new state: 4, 3, 3, 0, 1, 2
+Visited states: 124
+Current local minimum: 10
+Current state: 4, 3, 3, 0, 1, 2
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 0, 0, 0, 0, 0, trying combination: [(4, 2), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 2, 1
+Visited states: 125
+Current local minimum: 10
+Current state: 0, 0, 0, 0, 2, 1
+Current joltages: [3, 1, 2, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 4, 2, 7]
+	Next position, to press 2 times, is 2
+	Will attempt to press 2 times using the 3 switches: [Switch([2]), Switch([2, 3]), Switch([0, 2])]
+	Combinations possible: 6
+	From state 0, 0, 0, 0, 2, 1, trying combination: [(2, 0), (3, 0), (4, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 4, 1
+Visited states: 126
+Current local minimum: 10
+Current state: 0, 0, 0, 0, 4, 1
+Current joltages: [5, 1, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 2, 1, trying combination: [(2, 0), (3, 1), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 1, 3, 1
+Visited states: 127
+Current local minimum: 10
+Current state: 0, 0, 0, 1, 3, 1
+Current joltages: [4, 1, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 2, 1, trying combination: [(2, 0), (3, 2), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 2, 2, 1
+Visited states: 128
+Current local minimum: 10
+Current state: 0, 0, 0, 2, 2, 1
+Current joltages: [3, 1, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 4, 0, 5]
+	Next position, to press 4 times, is 1
+	Will attempt to press 4 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 5
+	From state 0, 0, 0, 2, 2, 1, trying combination: [(1, 0), (5, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 2, 2, 5
+Visited states: 129
+Current local minimum: 10
+Current state: 0, 0, 0, 2, 2, 5
+Current joltages: [7, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 2, 2, 1, trying combination: [(1, 1), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 0, 2, 2, 4
+Visited states: 130
+Current local minimum: 10
+Current state: 0, 1, 0, 2, 2, 4
+Current joltages: [6, 5, 4, 3]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 2, 2, 1, trying combination: [(1, 2), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 2, 2, 3
+Cache hit: State2([0, 2, 0, 2, 2, 3])
+	From state 0, 0, 0, 2, 2, 1, trying combination: [(1, 3), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 2, 2, 2
+Cache hit: State2([0, 3, 0, 2, 2, 2])
+	From state 0, 0, 0, 2, 2, 1, trying combination: [(1, 4), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 0, 2, 2, 1
+Visited states: 131
+Current local minimum: 10
+Current state: 0, 4, 0, 2, 2, 1
+Current joltages: [3, 5, 4, 6]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 1]
+	Next position, to press 1 times, is 3
+	Will attempt to press 1 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 3
+	From state 0, 4, 0, 2, 2, 1, trying combination: [(0, 0), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 0, 3, 2, 1
+Visited states: 132
+Current local minimum: 10
+Current state: 0, 4, 0, 3, 2, 1
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 4, 0, 2, 2, 1, trying combination: [(0, 0), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 0, 2, 2, 1
+Visited states: 133
+Current local minimum: 10
+Current state: 0, 5, 0, 2, 2, 1
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 4, 0, 2, 2, 1, trying combination: [(0, 1), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 0, 2, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 0, 2, 2, 1
+Visited states: 134
+Current local minimum: 10
+Current state: 1, 4, 0, 2, 2, 1
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Reached desired state
+	From state 0, 0, 0, 0, 2, 1, trying combination: [(2, 1), (3, 0), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 1, 0, 3, 1
+Visited states: 135
+Current local minimum: 10
+Current state: 0, 0, 1, 0, 3, 1
+Current joltages: [4, 1, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 2, 1, trying combination: [(2, 1), (3, 1), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 1, 1, 2, 1
+Visited states: 136
+Current local minimum: 10
+Current state: 0, 0, 1, 1, 2, 1
+Current joltages: [3, 1, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 4, 0, 6]
+	Next position, to press 4 times, is 1
+	Will attempt to press 4 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 5
+	From state 0, 0, 1, 1, 2, 1, trying combination: [(1, 0), (5, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 1, 1, 2, 5
+Visited states: 137
+Current local minimum: 10
+Current state: 0, 0, 1, 1, 2, 5
+Current joltages: [7, 5, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 1, 1, 2, 1, trying combination: [(1, 1), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 1, 1, 2, 4
+Visited states: 138
+Current local minimum: 10
+Current state: 0, 1, 1, 1, 2, 4
+Current joltages: [6, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 1, 1, 2, 1, trying combination: [(1, 2), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 1, 2, 3
+Cache hit: State2([0, 2, 1, 1, 2, 3])
+	From state 0, 0, 1, 1, 2, 1, trying combination: [(1, 3), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 1, 2, 2
+Cache hit: State2([0, 3, 1, 1, 2, 2])
+	From state 0, 0, 1, 1, 2, 1, trying combination: [(1, 4), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 1, 1, 2, 1
+Visited states: 139
+Current local minimum: 10
+Current state: 0, 4, 1, 1, 2, 1
+Current joltages: [3, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 2]
+	Next position, to press 2 times, is 3
+	Will attempt to press 2 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 6
+	From state 0, 4, 1, 1, 2, 1, trying combination: [(0, 0), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 1, 3, 2, 1
+Visited states: 140
+Current local minimum: 10
+Current state: 0, 4, 1, 3, 2, 1
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 1, 1, 2, 1, trying combination: [(0, 0), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 1, 2, 2, 1
+Visited states: 141
+Current local minimum: 10
+Current state: 0, 5, 1, 2, 2, 1
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 1, 1, 2, 1, trying combination: [(0, 0), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 1, 1, 2, 1
+Visited states: 142
+Current local minimum: 10
+Current state: 0, 6, 1, 1, 2, 1
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 1, 1, 2, 1, trying combination: [(0, 1), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 1, 2, 2, 1
+Visited states: 143
+Current local minimum: 10
+Current state: 1, 4, 1, 2, 2, 1
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 1, 1, 2, 1, trying combination: [(0, 1), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 1, 1, 2, 1
+Visited states: 144
+Current local minimum: 10
+Current state: 1, 5, 1, 1, 2, 1
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 1, 1, 2, 1, trying combination: [(0, 2), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 1, 1, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 2, 4, 1, 1, 2, 1
+Visited states: 145
+Current local minimum: 10
+Current state: 2, 4, 1, 1, 2, 1
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 0, 0, 0, 2, 1, trying combination: [(2, 2), (3, 0), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 2, 0, 2, 1
+Visited states: 146
+Current local minimum: 10
+Current state: 0, 0, 2, 0, 2, 1
+Current joltages: [3, 1, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 4, 0, 7]
+	Next position, to press 4 times, is 1
+	Will attempt to press 4 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 5
+	From state 0, 0, 2, 0, 2, 1, trying combination: [(1, 0), (5, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 2, 0, 2, 5
+Visited states: 147
+Current local minimum: 10
+Current state: 0, 0, 2, 0, 2, 5
+Current joltages: [7, 5, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 2, 0, 2, 1, trying combination: [(1, 1), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 2, 0, 2, 4
+Visited states: 148
+Current local minimum: 10
+Current state: 0, 1, 2, 0, 2, 4
+Current joltages: [6, 5, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 2, 0, 2, 1, trying combination: [(1, 2), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 2, 0, 2, 3
+Cache hit: State2([0, 2, 2, 0, 2, 3])
+	From state 0, 0, 2, 0, 2, 1, trying combination: [(1, 3), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 2, 0, 2, 2
+Cache hit: State2([0, 3, 2, 0, 2, 2])
+	From state 0, 0, 2, 0, 2, 1, trying combination: [(1, 4), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 2, 0, 2, 1
+Visited states: 149
+Current local minimum: 10
+Current state: 0, 4, 2, 0, 2, 1
+Current joltages: [3, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 3]
+	Next position, to press 3 times, is 3
+	Will attempt to press 3 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 10
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 0), (1, 0), (3, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 2, 3, 2, 1
+Visited states: 150
+Current local minimum: 10
+Current state: 0, 4, 2, 3, 2, 1
+Current joltages: [3, 5, 7, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 0), (1, 1), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 2, 2, 2, 1
+Visited states: 151
+Current local minimum: 10
+Current state: 0, 5, 2, 2, 2, 1
+Current joltages: [3, 6, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 0), (1, 2), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 2, 1, 2, 1
+Visited states: 152
+Current local minimum: 10
+Current state: 0, 6, 2, 1, 2, 1
+Current joltages: [3, 7, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 0), (1, 3), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 0, 7, 2, 0, 2, 1
+Visited states: 153
+Current local minimum: 10
+Current state: 0, 7, 2, 0, 2, 1
+Current joltages: [3, 8, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 1), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 1, 4, 2, 2, 2, 1
+Visited states: 154
+Current local minimum: 10
+Current state: 1, 4, 2, 2, 2, 1
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 1), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 2, 1, 2, 1
+Visited states: 155
+Current local minimum: 10
+Current state: 1, 5, 2, 1, 2, 1
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 1), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 1, 6, 2, 0, 2, 1
+Visited states: 156
+Current local minimum: 10
+Current state: 1, 6, 2, 0, 2, 1
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 2), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 2, 4, 2, 1, 2, 1
+Visited states: 157
+Current local minimum: 10
+Current state: 2, 4, 2, 1, 2, 1
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 2), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 2, 5, 2, 0, 2, 1
+Visited states: 158
+Current local minimum: 10
+Current state: 2, 5, 2, 0, 2, 1
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 4, 2, 0, 2, 1, trying combination: [(0, 3), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 4, 2, 0, 2, 1
+		[new_state_by_pressing_many_buttons] new state: 3, 4, 2, 0, 2, 1
+Visited states: 159
+Current local minimum: 10
+Current state: 3, 4, 2, 0, 2, 1
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 0, 0, 0, 0, 0, trying combination: [(4, 3), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 0, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 3, 0
+Visited states: 160
+Current local minimum: 10
+Current state: 0, 0, 0, 0, 3, 0
+Current joltages: [3, 0, 3, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 5, 1, 7]
+	Next position, to press 1 times, is 2
+	Will attempt to press 1 times using the 3 switches: [Switch([2]), Switch([2, 3]), Switch([0, 2])]
+	Combinations possible: 3
+	From state 0, 0, 0, 0, 3, 0, trying combination: [(2, 0), (3, 0), (4, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 0, 4, 0
+Visited states: 161
+Current local minimum: 10
+Current state: 0, 0, 0, 0, 4, 0
+Current joltages: [4, 0, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 0, 3, 0, trying combination: [(2, 0), (3, 1), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 1, 3, 0
+Visited states: 162
+Current local minimum: 10
+Current state: 0, 0, 0, 1, 3, 0
+Current joltages: [3, 0, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 5, 0, 6]
+	Next position, to press 5 times, is 1
+	Will attempt to press 5 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 6
+	From state 0, 0, 0, 1, 3, 0, trying combination: [(1, 0), (5, 5)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 0, 1, 3, 5
+Visited states: 163
+Current local minimum: 10
+Current state: 0, 0, 0, 1, 3, 5
+Current joltages: [8, 5, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 1, 3, 0, trying combination: [(1, 1), (5, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 0, 1, 3, 4
+Visited states: 164
+Current local minimum: 10
+Current state: 0, 1, 0, 1, 3, 4
+Current joltages: [7, 5, 4, 2]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 1, 3, 0, trying combination: [(1, 2), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 0, 1, 3, 3
+Cache hit: State2([0, 2, 0, 1, 3, 3])
+	From state 0, 0, 0, 1, 3, 0, trying combination: [(1, 3), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 0, 1, 3, 2
+Cache hit: State2([0, 3, 0, 1, 3, 2])
+	From state 0, 0, 0, 1, 3, 0, trying combination: [(1, 4), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 0, 1, 3, 1
+Visited states: 165
+Current local minimum: 10
+Current state: 0, 4, 0, 1, 3, 1
+Current joltages: [4, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 0, 1, 3, 0, trying combination: [(1, 5), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 0, 1, 3, 0
+Visited states: 166
+Current local minimum: 10
+Current state: 0, 5, 0, 1, 3, 0
+Current joltages: [3, 5, 4, 6]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 1]
+	Next position, to press 1 times, is 3
+	Will attempt to press 1 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 3
+	From state 0, 5, 0, 1, 3, 0, trying combination: [(0, 0), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 0, 2, 3, 0
+Visited states: 167
+Current local minimum: 10
+Current state: 0, 5, 0, 2, 3, 0
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 5, 0, 1, 3, 0, trying combination: [(0, 0), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 0, 1, 3, 0
+Visited states: 168
+Current local minimum: 10
+Current state: 0, 6, 0, 1, 3, 0
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 5, 0, 1, 3, 0, trying combination: [(0, 1), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 0, 1, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 0, 1, 3, 0
+Visited states: 169
+Current local minimum: 10
+Current state: 1, 5, 0, 1, 3, 0
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Reached desired state
+	From state 0, 0, 0, 0, 3, 0, trying combination: [(2, 1), (3, 0), (4, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 0, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 1, 0, 3, 0
+Visited states: 170
+Current local minimum: 10
+Current state: 0, 0, 1, 0, 3, 0
+Current joltages: [3, 0, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 5, 0, 7]
+	Next position, to press 5 times, is 1
+	Will attempt to press 5 times using the 2 switches: [Switch([1, 3]), Switch([0, 1])]
+	Combinations possible: 6
+	From state 0, 0, 1, 0, 3, 0, trying combination: [(1, 0), (5, 5)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 0, 1, 0, 3, 5
+Visited states: 171
+Current local minimum: 10
+Current state: 0, 0, 1, 0, 3, 5
+Current joltages: [8, 5, 4, 0]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 1, 0, 3, 0, trying combination: [(1, 1), (5, 4)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 1, 1, 0, 3, 4
+Visited states: 172
+Current local minimum: 10
+Current state: 0, 1, 1, 0, 3, 4
+Current joltages: [7, 5, 4, 1]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 1, 0, 3, 0, trying combination: [(1, 2), (5, 3)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 2, 1, 0, 3, 3
+Cache hit: State2([0, 2, 1, 0, 3, 3])
+	From state 0, 0, 1, 0, 3, 0, trying combination: [(1, 3), (5, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 3, 1, 0, 3, 2
+Cache hit: State2([0, 3, 1, 0, 3, 2])
+	From state 0, 0, 1, 0, 3, 0, trying combination: [(1, 4), (5, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 4, 1, 0, 3, 1
+Visited states: 173
+Current local minimum: 10
+Current state: 0, 4, 1, 0, 3, 1
+Current joltages: [4, 5, 4, 4]
+Desired joltages: [3, 5, 4, 7]
+Stopped search: current state won't lead to solution
+	From state 0, 0, 1, 0, 3, 0, trying combination: [(1, 5), (5, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 0, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 1, 0, 3, 0
+Visited states: 174
+Current local minimum: 10
+Current state: 0, 5, 1, 0, 3, 0
+Current joltages: [3, 5, 4, 5]
+Desired joltages: [3, 5, 4, 7]
+	Missing presses: [0, 0, 0, 2]
+	Next position, to press 2 times, is 3
+	Will attempt to press 2 times using the 3 switches: [Switch([3]), Switch([1, 3]), Switch([2, 3])]
+	Combinations possible: 6
+	From state 0, 5, 1, 0, 3, 0, trying combination: [(0, 0), (1, 0), (3, 2)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 5, 1, 2, 3, 0
+Visited states: 175
+Current local minimum: 10
+Current state: 0, 5, 1, 2, 3, 0
+Current joltages: [3, 5, 6, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 5, 1, 0, 3, 0, trying combination: [(0, 0), (1, 1), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 6, 1, 1, 3, 0
+Visited states: 176
+Current local minimum: 10
+Current state: 0, 6, 1, 1, 3, 0
+Current joltages: [3, 6, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 5, 1, 0, 3, 0, trying combination: [(0, 0), (1, 2), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 0, 7, 1, 0, 3, 0
+Visited states: 177
+Current local minimum: 10
+Current state: 0, 7, 1, 0, 3, 0
+Current joltages: [3, 7, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 5, 1, 0, 3, 0, trying combination: [(0, 1), (1, 0), (3, 1)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 1, 5, 1, 1, 3, 0
+Visited states: 178
+Current local minimum: 10
+Current state: 1, 5, 1, 1, 3, 0
+Current joltages: [3, 5, 5, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 5, 1, 0, 3, 0, trying combination: [(0, 1), (1, 1), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 1, 6, 1, 0, 3, 0
+Visited states: 179
+Current local minimum: 10
+Current state: 1, 6, 1, 0, 3, 0
+Current joltages: [3, 6, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+	From state 0, 5, 1, 0, 3, 0, trying combination: [(0, 2), (1, 0), (3, 0)]
+		[new_state_by_pressing_many_buttons] current state: 0, 5, 1, 0, 3, 0
+		[new_state_by_pressing_many_buttons] new state: 2, 5, 1, 0, 3, 0
+Visited states: 180
+Current local minimum: 10
+Current state: 2, 5, 1, 0, 3, 0
+Current joltages: [3, 5, 4, 7]
+Desired joltages: [3, 5, 4, 7]
+Current state is larger than best state. No need to keep exploring
+Desired Joltages: [3, 5, 4, 7]
+Obtained with:
+	switch: (3)
+	pressed times: 1
+	switch: (1,3)
+	pressed times: 2
+	switch: (2)
+	pressed times: 0
+	switch: (2,3)
+	pressed times: 4
+	switch: (0,2)
+	pressed times: 0
+	switch: (0,1)
+	pressed times: 3
+	total pressed times: 10
++++++
+Final result: 10

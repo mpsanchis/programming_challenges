@@ -1,8 +1,8 @@
-use std::{usize, thread, time, vec};
-use std::{collections::HashMap};
+use std::{usize, vec};
 use std::collections::{HashSet, VecDeque};
 
-use crate::day10::types::SwitchesPressed;
+use super::types::SwitchesPressed;
+use super::combinatorics::CompositionCalculator;
 use crate::util::logger;
 
 use super::types::{Machine, State, Joltage, Switch};
@@ -119,6 +119,7 @@ pub struct MachineCalculator2 {
     machine: Machine,
     result: Option<State2>,
     state_cache: HashSet<State2>,
+    composition_calculator: CompositionCalculator,
 }
 
 enum CurrentVSDesired {
@@ -132,7 +133,8 @@ impl MachineCalculator2 {
         MachineCalculator2 { 
             machine, 
             result: None,
-            state_cache: HashSet::new()
+            state_cache: HashSet::new(),
+            composition_calculator: CompositionCalculator::new(),
         }
     }
     
@@ -158,9 +160,7 @@ impl MachineCalculator2 {
     
     fn compare_vs_best_state(&self, current_state: &State2) -> CurrentVSDesired {
         if let Some(best_state) = &self.result {
-            let lowest_switch_presses = best_state.iter().sum::<usize>();
-            let current_switch_presses = current_state.iter().sum::<usize>();
-            if current_switch_presses > lowest_switch_presses {
+            if current_state.button_presses() > best_state.button_presses() {
                 CurrentVSDesired::Larger
             } else {
                 CurrentVSDesired::Smaller
@@ -172,8 +172,6 @@ impl MachineCalculator2 {
     }
     
     fn compare_current_vs_desired_joltage(desired_joltages: &Vec<Joltage>, current_joltages: &Vec<Joltage>) -> CurrentVSDesired {
-        logger().logn(&format!("[compare_current_vs_desired_joltage] Current joltages: {:?}", current_joltages));
-        logger().logn(&format!("[compare_current_vs_desired_joltage] Desired joltages: {:?}", desired_joltages));
         let mut all_equal = true;
         for i in 0..desired_joltages.len() {
             if current_joltages[i] > desired_joltages[i] {
@@ -191,14 +189,10 @@ impl MachineCalculator2 {
     
     
     fn update_state_if_better(&mut self, new_state: &State2) {
-        let buttons_pressed_current = if let Some(current_state) = &self.result {
-            current_state.iter().sum()
-        } else {
-            usize::MAX
-        };
-        let buttons_pressed_new = new_state.iter().sum::<usize>();
-        if buttons_pressed_new < buttons_pressed_current {
-            logger().logn(&format!("********* Updating result to buttons pressed: {buttons_pressed_new}"));
+        let buttons_pressed_current = self.result.as_ref().map_or(u32::MAX, |best_state| best_state.button_presses());
+        
+        if new_state.button_presses() < buttons_pressed_current {
+            logger().logn(&format!("********* Updating result to buttons pressed: {}", new_state.button_presses()));
             self.result = Some(new_state.clone());
         }
     }
@@ -213,7 +207,7 @@ impl MachineCalculator2 {
         }
         
         let local_min = &self.result.as_ref().map_or("None".to_string(), |best_state| {
-            best_state.iter().sum::<usize>().to_string()
+            best_state.iter().sum::<u32>().to_string()
         });
         logger().logn(&format!("Current local minimum: {local_min}"));
         
@@ -221,6 +215,7 @@ impl MachineCalculator2 {
         let desired_joltages = self.machine.get_joltages();
         let current_joltages = self.calculate_joltages(&state);
         logger().logn(&format!("Current joltages: {:?}", current_joltages));
+        logger().logn(&format!("Desired joltages: {:?}", desired_joltages));
         
         if matches!(self.compare_vs_best_state(&state), CurrentVSDesired::Larger) {
             logger().logn(&format!("Current state is larger than best state. No need to keep exploring"));
@@ -244,10 +239,36 @@ impl MachineCalculator2 {
             _ => ()
         }
 
-        // Explore pressing all the switches
-        for switch_id in 0..self.machine.get_switches().len() {
-            logger().logn(&format!("Pressing switch: {switch_id} = {}", self.machine.get_switches().get(switch_id).unwrap()));
-            let new_state = Self::new_state(&state, switch_id);
+        // Explore pressing only switches that take us to state where one of the joltages is the desired
+        let switch_presses_to_desired = current_joltages.iter()
+            .zip(desired_joltages.iter())
+            .map(|(current, desired)| desired - current)
+            .collect::<Vec<Joltage>>();
+        logger().logn(&format!("\tMissing presses: {:?}", switch_presses_to_desired));
+        let (position_to_reduce, switch_presses) = switch_presses_to_desired.iter().enumerate()
+            .filter(|(_, dist)| **dist > 0) // filter out positions that have already a desired joltage
+            .min_by(|d1, d2| d1.1.cmp(d2.1)).unwrap();
+        
+        logger().logn(&format!("\tNext position, to press {} times, is {}", switch_presses, position_to_reduce));
+        let valid_switch_ids = self.machine.get_switches().iter()
+            .enumerate()
+            .filter(|(_, switch)| {
+                // Only switches that can reduce selected distance 
+                switch.contains(position_to_reduce)
+            })
+            .map(|(i, _)| i)
+            .collect::<Vec<usize>>();
+        
+        let switch_combinations = self.composition_calculator.sums_of_n_in_k_parts(*switch_presses, valid_switch_ids.len());
+        logger().logn(&format!("\tWill attempt to press {} times using the {} switches: {:?}", switch_presses, valid_switch_ids.len(),valid_switch_ids.iter().map(|id| &self.machine.get_switches()[*id]).collect::<Vec<&Switch>>()));
+        logger().logn(&format!("\tCombinations possible: {}", switch_combinations.len()));
+        
+        for combination in switch_combinations {
+            let presses_per_switch_id = combination.iter().enumerate()
+                .map(|(pos, num_presses)| (valid_switch_ids[pos], *num_presses))
+                .collect::<Vec<(usize, u32)>>();
+            logger().logn(&format!("\tFrom state {}, trying combination: {:?}", state.to_string(), presses_per_switch_id));
+            let new_state = state.new_state_by_pressing_many_buttons(&presses_per_switch_id);
             self.calculate_result_recursively(new_state);
         }
     }
@@ -267,7 +288,7 @@ impl MachineCalculator2 {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
-pub struct State2(Vec<usize>);
+pub struct State2(Vec<u32>);
 
 impl State2 {
     pub fn new(size: usize) -> Self {
@@ -278,16 +299,41 @@ impl State2 {
         self.0.iter().map(|x| x.to_string()).collect::<Vec<String>>().join(", ")
     }
     
-    pub fn iter(&self) -> impl Iterator<Item = &usize> {
+    pub fn iter(&self) -> impl Iterator<Item = &u32> {
         self.0.iter()
     }
     
-    pub fn get(&self, i: &usize) -> Option<&usize> {
+    pub fn get(&self, i: &usize) -> Option<&u32> {
         self.0.get(*i)
     }
     
-    pub fn insert(&mut self, pos: usize, val: usize) {
+    pub fn len(&self) -> usize {
+        self.0.len()
+    }
+    
+    pub fn button_presses(&self) -> u32 {
+        self.0.iter().sum()
+    }
+    
+    pub fn insert(&mut self, pos: usize, val: u32) {
         self.0[pos] = val;
+    }
+    
+    fn new_state_by_clicking_times(&self, switch_id_to_try: usize, num_presses: u32) -> State2 {
+        let mut new_state = self.clone();
+        let current_attempts_switch = new_state.get(&switch_id_to_try).unwrap();
+        new_state.insert(switch_id_to_try, *current_attempts_switch + num_presses);
+        new_state
+    }
+    
+    fn new_state_by_pressing_many_buttons(&self, presses_per_switch: &Vec<(usize, u32)>) -> State2 {
+        logger().logn(&format!("\t\t[new_state_by_pressing_many_buttons] current state: {}", self.to_string()));
+        let mut new_state = self.clone();
+        for (switch_id_to_try, num_presses) in presses_per_switch {
+            new_state = new_state.new_state_by_clicking_times(*switch_id_to_try, *num_presses);
+        }
+        logger().logn(&format!("\t\t[new_state_by_pressing_many_buttons] new state: {}", new_state.to_string()));
+        new_state
     }
 }
 
@@ -312,9 +358,7 @@ impl MachineCalculatorResult2 {
         println!("+++++");
     }
     
-    pub fn num_presses(&self) -> usize {
-        self.result.iter().enumerate()
-            .map(|(_,num_presses)| num_presses)
-            .sum()
+    pub fn num_presses(&self) -> u32 {
+        self.result.button_presses()
     }
 }

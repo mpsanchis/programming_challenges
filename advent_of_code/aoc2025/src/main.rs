@@ -8,6 +8,7 @@ mod day7;
 mod day8;
 mod day9;
 mod day10;
+mod day11;
 mod util;
 
 fn main() {
@@ -29,6 +30,7 @@ fn main() {
         8 => day8::main(&args.part),
         9 => day9::main(&args.part),
         10 => day10::main(&args.part),
+        11 => day11::main(&args.part),
         _ => println!("Invalid day"),
     }
 }

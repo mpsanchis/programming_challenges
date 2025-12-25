@@ -21,9 +21,6 @@ impl Switch {
     pub fn iter(&self) -> impl Iterator<Item = &usize> {
         self.0.iter()
     }
-    pub fn contains(&self, elem: usize) -> bool {
-        self.0.contains(&elem)
-    }
 }
 
 impl Display for Switch {
@@ -111,15 +108,13 @@ impl State {
 
 pub struct Machine {
     desired_state: State,
-    joltages: Vec<Joltage>,
     switches: Vec<Switch>,
 }
 
 impl Machine {
-    pub fn new(desired_state: State, joltages: Vec<Joltage>, switches: Vec<Switch>) -> Self {
+    pub fn new(desired_state: State, _joltages: Vec<Joltage>, switches: Vec<Switch>) -> Self {
         Machine {
             desired_state,
-            joltages,
             switches,
         }
     }
@@ -131,11 +126,7 @@ impl Machine {
     pub fn get_switches(&self) -> &Vec<Switch> {
         &self.switches
     }
-    
-    pub fn get_joltages(&self) -> &Vec<Joltage> {
-        &self.joltages
-    }
-    
+
 }
 
 #[cfg(test)]

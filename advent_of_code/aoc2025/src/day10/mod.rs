@@ -1,13 +1,15 @@
-use crate::util::{Part, logger};
+use crate::util::{Part};
 
 mod types;
+mod types_ilp;
 mod input;
+mod input_ilp;
 mod calculator;
-mod combinatorics;
 
 use input::parse_input;
+use input_ilp::parse_input_ilp;
 use types::{Machine};
-use calculator::{MachineCalculator, MachineCalculatorResult, MachineCalculator2, MachineCalculatorResult2};
+use calculator::{MachineCalculator, MachineCalculatorResult};
 
 fn main_1(mut machines: Vec<Machine>) {
     machines.reverse();
@@ -26,22 +28,21 @@ fn main_1(mut machines: Vec<Machine>) {
     println!("Final result: {}", results.iter().map(|r| r.len()).sum::<usize>());
 }
 
-fn main_2(mut machines: Vec<Machine>) {
-    machines.reverse();
-    let mut results: Vec<MachineCalculatorResult2> = Vec::new();
-    let mut iter = 0;
+fn main_2() {
+    let input = parse_input_ilp();
+    let mut solutions = Vec::new();
     
-    while let Some(machine) = machines.pop() {
-        println!("Starting iteration {}", iter);
-        let mut machine_calculator = MachineCalculator2::new(machine);
-        results.push(machine_calculator.calculate_result());
-        iter += 1;
+    for problem in input {
+        let solution = problem.solve();
+        solutions.push(solution);
     }
     
-    for result in &results {
-        result.print();
+    for solution in &solutions {
+        println!("{:?}", solution);
+        println!("TOTAL {:?}", solution.iter().sum::<f64>());
     }
-    println!("Final result: {}", results.iter().map(|r| r.num_presses()).sum::<u32>());
+    let final_solution: f64 = solutions.iter().map(|solution| solution.iter().sum::<f64>()).sum();
+    println!("FINAL TOTAL {:?}", final_solution);
 }
 
 pub fn main(part: &Part) {
@@ -51,7 +52,7 @@ pub fn main(part: &Part) {
             main_1(machines);
         }
         Part::Two => {
-            main_2(machines);
+            main_2();
         }
     }
 }

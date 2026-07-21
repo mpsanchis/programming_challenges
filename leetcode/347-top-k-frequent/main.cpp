@@ -1,5 +1,5 @@
-// Compile with:
-// clang++ -std=c++20 main.cpp
+// Compile (debug):   clang++ -std=c++20 -DDEBUG main.cpp
+// Compile (release): clang++ -std=c++20 main.cpp
 
 #include <cassert>
 #include <map>
@@ -10,21 +10,18 @@
 #include <stdexcept>
 #include <iostream>
 
+#ifdef DEBUG
+  #define LOG(msg)   std::cout << msg
+  #define LOGLN(msg) std::cout << msg << "\n"
+#else
+  #define LOG(msg)
+  #define LOGLN(msg)
+#endif
+
 using namespace std;
 
 class Solution {
   private:
-      bool verbose;
-      void logln(string msg) {
-            if (this->verbose) {
-                  cout << msg << "\n";
-            }
-      }
-      void log(string msg) {
-            if (this->verbose) {
-                  cout << msg;
-            }
-      }
       map<int, int> get_elem_2_cnt(vector<int>& nums) {
           map<int, int> elem_2_cnt;
           for (int i=0; i<nums.size(); i++) {
@@ -61,9 +58,7 @@ class Solution {
             return elem_min_freq;
       }
   public:
-      Solution(bool verbose) {
-            this->verbose = verbose;
-      }
+      Solution() {}
       vector<int> topKFrequent(vector<int>& nums, int k) {
             auto elem_2_freq = get_elem_2_cnt(nums);
             // Store top k frequent items in an array
@@ -74,17 +69,15 @@ class Solution {
             for (pair<int, int> elem_2_cnt_entry : elem_2_freq) {
                   auto elem = elem_2_cnt_entry.first;
                   auto freq = elem_2_cnt_entry.second;
-                  this->log("elem: ");
-                  this->log(to_string(elem));
-                  this->log(" - freq: ");
-                  this->log(to_string(freq));
-                  this->log(" - lowest freq yet: ");
-                  this->logln(to_string(elem_lowest_freq.value_or(-1)));
+                  LOG("elem: " + to_string(elem)
+                      + " - freq: " + to_string(freq)
+                      + " - lowest freq yet: ");
+                  LOGLN(to_string(elem_lowest_freq.value_or(-1)));
 
                   // Frequency of current 'elem' is higher than the minimum OR not yet min num of elements
                   // First iteration: no value yet, just add to vector
                   if (!elem_lowest_freq.has_value()) {
-                        this->logln("no lowest elem yet.. Adding elem");
+                        LOGLN("no lowest elem yet.. Adding elem");
                         top_k_elem.push_back(elem);
                         elem_lowest_freq = optional(elem);
                         continue;
@@ -93,19 +86,18 @@ class Solution {
                   if (freq > lowest_freq || top_k_elem.size() < k) {
                         // Iterations 1..(k-1): not enough elements yet: just add to vector
                         if (top_k_elem.size() < k) {
-                              this->logln("top_k not found yet.. Adding elem");
+                              LOGLN("top_k not found yet.. Adding elem");
                               top_k_elem.push_back(elem);
                         }
                         // Iterations k..n: add element only if its frequency is higher than current min
                         else {
-                              this->log("finding which element to replace: ");
-                              this->logln(to_string(elem_lowest_freq.value()));
+                              LOGLN("finding which element to replace: " + to_string(elem_lowest_freq.value()));
                               auto pos_replace = find_position(top_k_elem, elem_lowest_freq.value());
                               top_k_elem[pos_replace] = elem;
                         }
                         elem_lowest_freq = optional(get_elem_min_freq(top_k_elem, elem_2_freq));
                   } else {
-                        this->logln("freq too low");
+                        LOGLN("freq too low");
                   }
             }
             return top_k_elem;
@@ -123,7 +115,7 @@ void printLnVector(const std::vector<T>& v) {
 }
 
 int main() {
-      auto solver = new Solution(true);
+      auto solver = new Solution();
       // Input: nums = [1,1,1,2,2,3], k = 2
       // Expected: [1,2]
       vector<int> nums = { 1, 1, 1, 2, 2, 3 };
